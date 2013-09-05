@@ -1,6 +1,6 @@
 {
   "name": "grunt-browserify-navigation",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Save browserify paths in Redis for quick lookup",
   "homepage": "https://github.com/trabian/grunt-browserify-navigation",
   "bugs": "https://github.com/trabian/grunt-browserify-navigation/issues",
