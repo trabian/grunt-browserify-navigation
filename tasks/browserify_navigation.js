@@ -21,23 +21,21 @@ module.exports = function(grunt) {
 
     var client = redis.createClient(opts.port, opts.host, opts.clientOptions);
 
+    var namespace = opts.namespace || 'browserify';
+
     grunt.log.ok('Redis client started using server at', [client.host, client.port].join(':'));
 
     grunt.event.removeAllListeners('browserify.dep');
 
     grunt.event.on('browserify.dep', function (dep) {
-      var id, pathName, _ref, _results;
-      _ref = dep.deps;
-      _results = [];
-      for (id in _ref) {
-        pathName = _ref[id];
-        _results.push((function(id, pathName) {
-          if (pathName) {
-            return client.hset("browserify:" + dep.id, id, pathName);
-          }
-        })(id, pathName));
+
+      var id, pathName;
+
+      for (id in dep.deps) {
+        pathName = dep.deps[id];
+        client.hset(namespace + ":" + dep.id, id, pathName);
       }
-      return _results;
+
     });
 
     process.on('exit', function () {

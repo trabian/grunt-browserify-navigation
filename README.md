@@ -34,6 +34,12 @@ grunt.initConfig({
 
 ### Options
 
+#### options.namespace
+Type: `String`
+Default value: `'browserify'`
+
+The namespace to use when creating Redis keys.
+
 #### options.port
 Type: `String`
 Default value: `'6379'`
@@ -63,13 +69,14 @@ grunt.initConfig({
 })
 ```
 
-#### Custom port, host, and clientOptions
+#### Custom namespace, port, host, and clientOptions
 In this example, custom options are used to do connect to a remote redis client with custom clientOptions.
 
 ```js
 grunt.initConfig({
   browserify_navigation: {
     options: {
+      namespace: 'my-browserify',
       port: 6380,
       host: '10.0.0.1',
       clientOptions: {
