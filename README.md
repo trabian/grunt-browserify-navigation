@@ -1,6 +1,6 @@
 # grunt-browserify-navigation
 
-> Save browserify paths in Redis for quick lookup by [SublimeText BrowserifyNavigation plugin](https://github.com/trabian/BrowserifyNavigation).
+> Save browserify paths in Redis for quick lookup by [SublimeText BrowserifyNavigation plugin](https://github.com/trabian/BrowserifyNavigation). See [this screencast](http://www.screencast.com/t/0FKXptqa9) for a demo (within the screencast the Sublime Text command is being triggered via a keyboard shortcut).
 
 During development the ability to quickly jump to the file referenced in a `require` statement can significantly speed up development. This plugin listens for `browserify.dep` events triggered by browserify and passed to grunt via the [trabian fork of grunt-browserify](https://github.com/trabian/grunt-browserify). This event passes a depencency object as the first argument to the callback which is then saved as a Hash key in redis.
 
