@@ -1,0 +1,31 @@
+{
+  "name": "grunt-browserify-navigation",
+  "version": "0.0.1",
+  "description": "Save browserify paths in Redis for quick lookup",
+  "homepage": "https://github.com/trabian/grunt-browserify-navigation",
+  "bugs": "https://github.com/trabian/grunt-browserify-navigation/issues",
+  "author": {
+    "name": "Matt Dean",
+    "email": "matt@trabian.com"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trabian/grunt-browserify-navigation"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.2.0",
+    "grunt-contrib-clean": "~0.4.0"
+  },
+  "dependencies": {
+    "redis": "~0.8.4"
+  }
+}
